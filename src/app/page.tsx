@@ -4,21 +4,21 @@ export default function Home() {
       {/* Hero */}
       <section className="flex flex-col items-center justify-center h-screen text-center">
         <img
-          src="/avatar.png"
+          src="/14.jpg"
           alt="My photo"
-          className="w-32 h-32 rounded-full shadow-lg mb-6"
+          className="w-60 h-60 rounded-full shadow-lg mb-6 object-cover object-top"
         />
         <h1 className="text-4xl font-bold">Hi, I’m Artem 👋</h1>
-        <p className="mt-3 text-lg">QA Engineer | Web Developer</p>
+        <p className="mt-3 text-lg">Middle General QA Engineer</p>
         <div className="mt-6 space-x-4">
           <a
-            href="mailto:your.email@example.com"
+            href="mailto:a.kosherenkov@gmail.com"
             className="px-4 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700"
           >
             Contact Me
           </a>
           <a
-            href="https://github.com/yourusername"
+            href="https://github.com/kosherenkov"
             className="px-4 py-2 bg-gray-800 text-white rounded-lg shadow hover:bg-gray-700"
           >
             GitHub
