@@ -37,20 +37,33 @@ export default function Home() {
       </section>
 
       {/* Down arrow for scroll hint (always visible below Hero) */}
-  <div className="pointer-events-none z-40 absolute left-1/2 -translate-x-1/2 bottom-4">
-    <svg width="32" height="32" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" className="animate-bounce text-gray-400 dark:text-gray-200">
+  <a
+    href="#about"
+    className="z-40 absolute left-1/2 -translate-x-1/2 bottom-4 cursor-pointer group"
+    aria-label="Scroll to About Me"
+  >
+    <svg width="32" height="32" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" className="animate-bounce text-gray-400 dark:text-gray-200 group-hover:text-blue-500 transition-colors">
       <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
     </svg>
-  </div>
+  </a>
 
   {/* About */}
-      <section className="max-w-3xl mx-auto py-20 px-6">
+  <section id="about" className="max-w-3xl mx-auto pt-6 pb-20 px-6">
         <h2 className="text-2xl font-semibold mb-4">About Me</h2>
-        <p>
-          I am a QA Engineer passionate about testing, automation, and building
-          modern web projects. I love working with SQL, BigQuery, and exploring
-          DevOps tools.
-        </p>
+        <div className="text-justify space-y-4 text-base leading-relaxed">
+          <p>
+            I am a Middle QA Engineer with solid experience in Web and Mobile testing, combining manual expertise with strong test automation skills. My toolkit includes Playwright, Postman, Jenkins, and Docker, which I use to design, execute, and integrate automated test suites into CI/CD pipelines.
+          </p>
+          <p>
+            I have a strong foundation in testing theory, test design techniques, and test documentation, and I apply these skills to build maintainable, scalable automation frameworks for both UI and API testing.
+          </p>
+          <p>
+            In my recent work, I addressed the problem of long regression cycles by implementing and expanding automation coverage, which reduced regression execution time by 20% — and continues to decrease with ongoing automation efforts.
+          </p>
+          <p>
+            I thrive in Agile/Scrum teams, collaborating closely with developers and product managers, while also mentoring juniors and helping to set testing priorities to ensure timely, high-quality releases.
+          </p>
+        </div>
       </section>
 
       {/* Skills */}
