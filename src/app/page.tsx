@@ -12,7 +12,7 @@ export default function Home() {
         </a>
       </div>
       {/* Hero */}
-  <section className="flex flex-col items-center justify-center min-h-screen text-center">
+  <section className="flex flex-col items-center justify-center min-h-screen text-center relative">
         <img
           src="/14.jpg"
           alt="My photo"
@@ -20,13 +20,14 @@ export default function Home() {
         />
         <h1 className="text-4xl font-bold">Hi, I’m Artem 👋</h1>
         <p className="mt-3 text-lg">Middle QA Engineer</p>
-        <div className="mt-6 space-x-4">
+  <div className="mt-6 space-x-4">
           <a
             href="mailto:a.kosherenkov@gmail.com"
             className="px-4 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700"
           >
             Contact Me
           </a>
+
           <a
             href="https://github.com/kosherenkov"
             className="px-4 py-2 bg-gray-800 text-white rounded-lg shadow hover:bg-gray-700"
@@ -34,18 +35,18 @@ export default function Home() {
             GitHub
           </a>
         </div>
-      </section>
 
-      {/* Down arrow for scroll hint (always visible below Hero) */}
-  <a
-    href="#about"
-    className="z-40 absolute left-1/2 -translate-x-1/2 bottom-4 cursor-pointer group"
-    aria-label="Scroll to About Me"
-  >
-    <svg width="32" height="32" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" className="animate-bounce text-gray-400 dark:text-gray-200 group-hover:text-blue-500 transition-colors">
-      <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-    </svg>
-  </a>
+        {/* Down arrow for scroll hint (always visible at bottom of Hero) */}
+        <a
+          href="#about"
+          className="z-40 absolute left-1/2 -translate-x-1/2 bottom-4 cursor-pointer group"
+          aria-label="Scroll to About Me"
+        >
+          <svg width="32" height="32" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" className="animate-bounce text-gray-400 dark:text-gray-200 group-hover:text-blue-500 transition-colors">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+          </svg>
+        </a>
+      </section>
 
   {/* About */}
   <section id="about" className="max-w-3xl mx-auto pt-6 pb-20 px-6">
