@@ -39,7 +39,7 @@ export default function Home() {
         {/* Down arrow for scroll hint (always visible at bottom of Hero) */}
         <a
           href="#about"
-          className="z-40 absolute left-1/2 -translate-x-1/2 bottom-4 cursor-pointer group"
+    className="z-40 absolute left-1/2 -translate-x-1/2 bottom-16 sm:bottom-4 cursor-pointer group"
           aria-label="Scroll to About Me"
         >
           <svg width="32" height="32" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" className="animate-bounce text-gray-400 dark:text-gray-200 group-hover:text-blue-500 transition-colors">
