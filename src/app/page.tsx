@@ -1,8 +1,33 @@
+"use client";
+import React, { useEffect, useRef, useState } from "react";
+
 export default function Home() {
+  const aboutRef = useRef(null);
+  const [hideDownload, setHideDownload] = useState(false);
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const observer = new window.IntersectionObserver(
+      ([entry]) => {
+        setHideDownload(entry.isIntersecting && window.innerWidth < 640);
+      },
+      {
+        root: null,
+        threshold: 0.1,
+      }
+    );
+    if (aboutRef.current) {
+      observer.observe(aboutRef.current);
+    }
+    return () => {
+      if (aboutRef.current) observer.unobserve(aboutRef.current);
+    };
+  }, []);
+
   return (
     <main className="min-h-screen bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100">
       {/* Download button (absolute, top-right) */}
-      <div className="fixed top-6 right-6 z-50">
+      <div className={`fixed top-6 right-6 z-50 ${hideDownload ? 'hidden' : 'block'} sm:block`}>
         <a
           href="/Kosherenkov Artem Middle QA Engineer.pdf"
           download
@@ -49,7 +74,7 @@ export default function Home() {
       </section>
 
   {/* About */}
-  <section id="about" className="max-w-3xl mx-auto pt-6 pb-20 px-6">
+  <section id="about" ref={aboutRef} className="max-w-3xl mx-auto pt-6 pb-20 px-6">
         <h2 className="text-2xl font-semibold mb-4">About Me</h2>
         <div className="text-justify space-y-4 text-base leading-relaxed">
           <p>
